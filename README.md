@@ -38,10 +38,10 @@ GLOBAL OPTIONS:
 - timeout on connect
 - timeout on receive answer
 
-I didn't bother implementing both since fo my usecase this is handled by kubernetes.
+I didn't bother implementing both since for my usecase this is handled by kubernetes.
 
 
 # Credits
 
-This small thing would not be possible without fcgiclient written by Junqing Tan
+This small thing would not be possible without fcgiclient written by Junqing Tan <ivan@mysqlab.net>
 
