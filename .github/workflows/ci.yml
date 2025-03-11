@@ -1,0 +1,18 @@
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: stable
+      - run: |
+          if [[ "$(go fmt)" ]]; then
+            echo "Go files were not formatted properly"
+            exit 1
+          fi
+          go build
+          go test
+          go vet
